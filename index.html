@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JDS Site</title>
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+</head>
+<body>
+
+	<canvas id="q"></canvas> 
+	<div id='main_block' class='unselectable'>
+		<div>
+			<h1 style="display: inline">Jojo Data Security</h1>
+			<a data-replace='Ab0ut' onclick="txt_about()">About</a>
+			<a data-replace='D0wnl0ad' onclick="txt_download()">Download</a>
+			<a data-replace='L1nks'>Links</a>
+		</div>
+	</div>
+	<div id='t2block'>
+		<p class='unselectable' id='info'>Welcome to the Jojo Data Security website!</p>
+	</div>
+</body>
+<style type="text/css">
+	.unselectable {
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -webkit-user-select: none;
+	    user-select: none;
+	}
+
+	body {
+		background: #101010;
+	}
+
+	#q {
+	    position:absolute;
+	    z-index:-1;
+	    top:0px;
+	    left:0px;
+	    opacity: 30%;
+	}
+
+	#t2block {
+		background-color: #000;
+
+		width: 98.45%;
+		padding: 2%;
+		padding-left: 1%;
+		margin-left: -1%;
+		margin-top: 1%;
+
+		opacity: 70%;
+		border: 1px solid #012901;
+
+		height: 77vh;
+		overflow: auto;
+		overflow-x: hidden
+	}
+
+	#main_block {
+		background-color: #000;
+		width: 98.45%;
+		padding: 2%;
+		padding-left: 1%;
+		margin-left: -1%;
+		margin-top: -2%;
+		opacity: 90%;
+
+		border: 1px solid #012901;
+	}
+
+	.bgimg {
+		position: relative;
+		width: 70%;
+		top: -100px;
+	}
+
+	p {
+		font-family: Lucida Console;
+		font-size: 21px;
+		color: #00A500;
+		white-space: pre-wrap;
+	}
+
+	a {
+		font-family: Lucida Console;
+		font-size: 24px;
+		color: #00A500;
+		margin: 20px;
+		position: absolute;
+		position: sticky;
+		cursor: pointer;
+	}
+
+	a:hover {
+      color: transparent;
+    }
+    
+    a:before {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: attr(data-replace);
+      color: transparent;
+      transition: 0.8s;
+    }
+    
+    a:hover:before {
+      color: #151515;
+      background: #FFF;
+    }
+
+	h1 {
+		font-family: Lucida Console;
+		font-size: 26px;
+		color: #00A500;
+	}
+</style>
+<script>
+	var my_info = document.getElementById("info");
+
+	var width = q.width = $(document).width();
+	var height = q.height = $(document).height();
+	var letters = Array(256).join(1).split('');
+
+	var draw = function () {
+	    q.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
+	    q.getContext('2d').fillRect(0, 0, width, height);
+	    q.getContext('2d').fillStyle = '#0e0';
+	    letters.map(function (y_pos, index) {
+	        text = String.fromCharCode(65 + Math.random() * 33);
+	        x_pos = index * 10;
+	        q.getContext('2d').fillText(text, x_pos, y_pos);
+	        letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
+	    });
+	};
+	setInterval(draw, 33);
+
+	function txt_about() {
+		my_info.innerHTML = 'JDS is a powerful tool for data protection.\nDocuments are encrypted using a special algorithm.\nThe data encryption algorithm is constantly updated to improve security.\nThe program also provides other functions. Such as sending a file to a vault with password access, fast text encryption in 3 types, and much more.\n\nThe program is easy to use and does not require special knowledge.\n\nThe standard version has 2 languages (Russian and English) and 9 themes.\nYou can download the language and theme pack separately.';
+	}
+
+	function txt_download() {
+		my_info.innerHTML = 'Download latest version of the program\n\n<a data-replace="https://g1thub.c0m/mypr0gram-1.0.0" href="program.exe">https://github.com/myprogram-1.0.0</a>';
+	}
+</script>
+</html>
