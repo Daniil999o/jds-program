@@ -14,7 +14,7 @@
 			<h1 style="display: inline">Jojo Data Security</h1>
 			<a data-replace='Ab0ut' onclick="txt_about()">About</a>
 			<a data-replace='D0wnl0ad' onclick="txt_download()">Download</a>
-			<a data-replace='L1nks'>Links</a>
+			<a data-replace='L1nks' onclick='txt_links()'>Links</a>
 		</div>
 	</div>
 	<div id='t2block'>
@@ -145,7 +145,11 @@
 	}
 
 	function txt_download() {
-		my_info.innerHTML = 'Download latest version of the program\n\n<a data-replace="https://g1thub.c0m/mypr0gram-1.0.0" href="program.exe">https://github.com/myprogram-1.0.0</a>';
+		my_info.innerHTML = 'Select the version of the program:\n\n<a data-replace="jds-1.0.0_w1n32.zip" href="archives/jds-1.0.0_win32.zip">jds-1.0.0_win32.zip</a> 2.3 MB\n\n<a data-replace="jds-1.0.0_w1n64.zip" href="archives/jds-1.0.0_win64.zip">jds-1.0.0_win64.zip</a> 3.0 MB';
+	}
+
+	function txt_links() {
+		my_info.innerHTML = '<a target="blank" data-replace="https://g1thub.c0m/Dan11l9990/jds-pr0gram" href="https://github.com/Daniil999o/jds-program">https://github.com/Daniil999o/jds-program</a>\n\n<a target="blank" href="https://cda-games.jimdosite.com" data-replace="https://cda-games.j1md0s1te.c0m">https://cda-games.jimdosite.com</a>\n\n<a target="blank" data-replace="https://vk.c0m/cdagames" href="https://vk.com/cdagames">https://vk.com/cdagames</a>'
 	}
 </script>
 </html>
