@@ -35,8 +35,8 @@
 	<div id='t2block'>
 		<p class='unselectable' id='info'>Welcome to the website of the JDS program!</p>
 	</div>
-	<p id='tech_version' style="display: none;">1.0</p>
-	<p id='tech_desc' style="display: none;">Official release of jds 1.0.0.</p>
+	<p id='tech_version' style="display: none;">1.1</p>
+	<p id='tech_desc' style="display: none;">- Fixed search for updates.<br>- Added a bin decoder.<br>- Added hex decoder.<br>- Changed the behavior of the program with an incorrect language file.</p>
 </body>
 <style type="text/css">
 	.unselectable {
@@ -175,19 +175,45 @@
 	setInterval(draw, 33);
 
 	function txt_about() {
-		my_info.innerHTML = 'JDS is a powerful tool for data protection.\nDocuments are encrypted using a special algorithm.\nThe data encryption algorithm is constantly updated to improve security.\nThe program also provides other functions. Such as sending a file to a vault with password access, fast text encryption in 3 types, and much more.\n\nThe program is easy to use and does not require special knowledge.\n\nThe standard version has 2 languages (Russian and English) and 9 themes.\nYou can download the language and theme pack separately.';
+		my_info.innerHTML = `JDS is a powerful tool for data protection.
+Documents are encrypted using a special algorithm.
+The data encryption algorithm is constantly updated to improve security.
+The program also provides other functions. Such as sending a file to a vault with password access, fast text encryption in 3 types, and much more.
+
+The program is easy to use and does not require special knowledge.
+
+The standard version has 2 languages (Russian and English) and 9 themes.
+You can download the language and theme pack separately.`;
 	}
 
 	function txt_download() {
-		my_info.innerHTML = 'Select the version of the program:\n\n<a data-replace="jds-1.0.0_w1n32.zip" href="archives/jds-1.0.0_win32.zip">jds-1.0.0_win32.zip</a> 2.3 MB\n\n<a data-replace="jds-1.0.0_w1n64.zip" href="archives/jds-1.0.0_win64.zip">jds-1.0.0_win64.zip</a> 3.0 MB';
+		my_info.innerHTML = `Files:
+
+<a data-replace="lang_pack-1.0.0.z1p" href="archives/lang_pack-1.0.0.zip">lang_pack-1.0.0.zip</a> 0.2 MB
+
+Select the version of the program:
+
+<a data-replace="jds-1.1.0_w1n32.z1p" href="archives/jds-1.1.0_win32.zip">jds-1.1.0_win32.zip</a> 2.9 MB
+
+<a data-replace="jds-1.1.0_w1n64.z1p" href="archives/jds-1.1.0_win64.zip">jds-1.1.0_win64.zip</a> 3.8 MB
+
+<a data-replace="jds-1.0.0_w1n32.z1p" href="archives/jds-1.0.0_win32.zip">jds-1.0.0_win32.zip</a> 2.3 MB
+
+<a data-replace="jds-1.0.0_w1n64.z1p" href="archives/jds-1.0.0_win64.zip">jds-1.0.0_win64.zip</a> 3.0 MB`;
 	}
 
 	function txt_links() {
-		my_info.innerHTML = '<a target="blank" data-replace="https://g1thub.c0m/Dan11l9990/jds-pr0gram" href="https://github.com/Daniil999o/jds-program">https://github.com/Daniil999o/jds-program</a>\n\n<a target="blank" href="https://cda-games.jimdosite.com" data-replace="https://cda-games.j1md0s1te.c0m">https://cda-games.jimdosite.com</a>\n\n<a target="blank" data-replace="https://vk.c0m/cdagames" href="https://vk.com/cdagames">https://vk.com/cdagames</a>'
+		my_info.innerHTML = `<a target="blank" data-replace="https://g1thub.c0m/Dan11l9990/jds-pr0gram" href="https://github.com/Daniil999o/jds-program">https://github.com/Daniil999o/jds-program</a>
+
+<a target="blank" href="https://cda-games.jimdosite.com" data-replace="https://cda-games.j1md0s1te.c0m">https://cda-games.jimdosite.com</a>
+
+<a target="blank" data-replace="https://vk.c0m/cdagames" href="https://vk.com/cdagames">https://vk.com/cdagames</a>`
 	}
 
 	function txt_screens() {
-		my_info.innerHTML = 'Screenshots:\n\n<p style="text-align: center;"><img src="https://daniil999o.github.io/jds-program/img/screen1.png" onclick="toLink(this.src)"><img src="https://daniil999o.github.io/jds-program/img/screen2.png" onclick="toLink(this.src)"><img src="https://daniil999o.github.io/jds-program/img/screen3.png" onclick="toLink(this.src)"><img src="https://daniil999o.github.io/jds-program/img/screen4.png" onclick="toLink(this.src)"></p>';
+		my_info.innerHTML = `Screenshots:
+
+<p style="text-align: center;"><img src="https://daniil999o.github.io/jds-program/img/screen1.png" onclick="toLink(this.src)"><img src="https://daniil999o.github.io/jds-program/img/screen2.png" onclick="toLink(this.src)"><img src="https://daniil999o.github.io/jds-program/img/screen3.png" onclick="toLink(this.src)"><img src="https://daniil999o.github.io/jds-program/img/screen4.png" onclick="toLink(this.src)"></p>`;
 	}
 
 	function toLink(link) {
