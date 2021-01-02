@@ -35,8 +35,8 @@
 	<div id='t2block'>
 		<p class='unselectable' id='info'>Welcome to the website of the JDS program!</p>
 	</div>
-	<p id='tech_version' style="display: none;">1.1</p>
-	<p id='tech_desc' style="display: none;">- Fixed search for updates.<br>- Added a bin decoder.<br>- Added hex decoder.<br>- Changed the behavior of the program with an incorrect language file.</p>
+	<p id='tech_version' style="display: none;">1.2</p>
+	<p id='tech_desc' style="display: none;">- Fixed search for updates.<br>- Changed the behavior of the program with an incorrect language file.<br>- Now you can set a password for files in the storage.<br>- Minor bugs fixed.</p>
 </body>
 <style type="text/css">
 	.unselectable {
@@ -161,8 +161,6 @@
 	var height = q.height = $(document).height();
 	var letters = Array(256).join(1).split('');
 
-	document.getElementById("tech_desc").innerHTML = "- Fixed search for updates.\n- Added a bin decoder.\n- Added hex decoder.\n- Changed the behavior of the program with an incorrect language file.";
-
 	var draw = function () {
 	    q.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
 	    q.getContext('2d').fillRect(0, 0, width, height);
@@ -195,6 +193,10 @@ You can download the language and theme pack separately.`;
 
 Select the version of the program:
 
+<a data-replace="jds-1.2.0_w1n32.z1p" href="archives/jds-1.2.0_win32.zip">jds-1.2.0_win32.zip</a> 2.9 MB
+
+<a data-replace="jds-1.2.0_w1n64.z1p" href="archives/jds-1.2.0_win64.zip">jds-1.2.0_win64.zip</a> 3.8 MB
+
 <a data-replace="jds-1.1.0_w1n32.z1p" href="archives/jds-1.1.0_win32.zip">jds-1.1.0_win32.zip</a> 2.9 MB
 
 <a data-replace="jds-1.1.0_w1n64.z1p" href="archives/jds-1.1.0_win64.zip">jds-1.1.0_win64.zip</a> 3.8 MB
@@ -206,6 +208,8 @@ Select the version of the program:
 
 	function txt_links() {
 		my_info.innerHTML = `<a target="blank" data-replace="https://g1thub.c0m/Dan11l9990/jds-pr0gram" href="https://github.com/Daniil999o/jds-program">https://github.com/Daniil999o/jds-program</a>
+
+<a target="blank" data-replace="https://s0urcef0rge.net/pr0jects/jds-pr0gram" href="https://sourceforge.net/projects/jds-program">https://sourceforge.net/projects/jds-program</a>
 
 <a target="blank" href="https://cda-games.jimdosite.com" data-replace="https://cda-games.j1md0s1te.c0m">https://cda-games.jimdosite.com</a>
 
